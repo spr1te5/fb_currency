@@ -4,12 +4,18 @@ feature 'RUR/USD exchange rate management GUI', type: :feature do
 	context 'default value' do
     it 'is set' do
       old_rate = 33
+      today = Time.now.to_date
+
+      month_selector = ->(day) {
+        # all(:css, "#currency_exchange_rate_valid_until_2i option[value='#{day.month}']").select_option
+        find('#currency_exchange_rate_valid_until_2i').all(:css, 'option')[day.month-1].text
+      }
 
       visit admin_path
       fill_in 'currency_exchange_rate[forced_value]', with: old_rate
-      select '22', from: 'currency_exchange_rate[valid_until(3i)]'
-      select 'November', from: 'currency_exchange_rate[valid_until(2i)]'
-      select '2020', from: 'currency_exchange_rate[valid_until(1i)]'
+      select today.day, from: 'currency_exchange_rate[valid_until(3i)]'
+      select month_selector.(today), from: 'currency_exchange_rate[valid_until(2i)]'
+      select today.year, from: 'currency_exchange_rate[valid_until(1i)]'
       accept_alert do
         click_on 'Set exchange rate!'
       end
@@ -19,11 +25,11 @@ feature 'RUR/USD exchange rate management GUI', type: :feature do
       visit root_path
       expect(find(:css, '#rate-wrapper .value').text).to eq '33'
 
-
+      yesterday = today - 1.day
       visit admin_path
-      select '1', from: 'currency_exchange_rate[valid_until(3i)]'
-      select 'November', from: 'currency_exchange_rate[valid_until(2i)]'
-      select '2020', from: 'currency_exchange_rate[valid_until(1i)]'
+      select yesterday.day, from: 'currency_exchange_rate[valid_until(3i)]'
+      select month_selector.(yesterday), from: 'currency_exchange_rate[valid_until(2i)]'
+      select yesterday.year, from: 'currency_exchange_rate[valid_until(1i)]'
       accept_alert do
         click_on 'Set exchange rate!'
       end
