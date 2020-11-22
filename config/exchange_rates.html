@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://www.cbr.ru/currency_base/daily/ -->
+<html style="--scrollbar-width:15px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="zoom:lang" content="ru">
+    <meta name="zoom:last-modified" content="Thu, 19 Nov 2020 21:00:00 GMT">
+<title>Официальные курсы валют на&nbsp;заданную дату, устанавливаемые ежедневно | Банк России</title>
+
+
+
+    <meta property="og:image" content="/common/images/share-1.jpg">
+
+    
+
+
+            <link rel="stylesheet" type="text/css" href="./exchage_rates_files/jquery-ui.min.css" media="all">
+
+            <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/common/style/main-ie9.css?v=v544946829" media="all"><![endif]-->
+
+            <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="./exchage_rates_files/main.css" media="all"><!--<![endif]-->
+
+
+        <script async="" src="./exchage_rates_files/tag.js"></script><script type="text/javascript" src="./exchage_rates_files/jquery-3.4.1.min.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/jquery-ui.min.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/jquery.inputmask.min.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/vendor.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/jquery.floatThead.min.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/main.min.js"></script>
+
+
+        <script type="text/javascript" src="./exchage_rates_files/localization-ru.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/jquery.cookie.min.js"></script>
+
+        <script type="text/javascript" src="./exchage_rates_files/site.js"></script>
+
+
+
+
+
+<script src="./exchage_rates_files/queries-ui.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        var $menu = $('[data-menu]'),
+            $menuItemBtn = $menu.find('[data-menu-item-btn]'),
+            $menuShow = $('[data-menu-show]'),
+            $menuClose = $('[data-menu-close]');
+        var config = $menu.data('config');
+
+        $menu.find('.header_right').html($('#header .header_right').html());
+
+        $menuShow.on('click.cms_loadwholesite', function (event) {
+            loadWholeSite(true);
+        });
+        $menuShow.on('mouseenter.cms_loadwholesite', function (event) {
+            loadWholeSite(false);
+        });
+
+        var xhr = null, g_openMenu = false;
+        function loadWholeSite(openmenu) {
+            g_openMenu = g_openMenu || openmenu;
+            $menuShow.off('click.cms_loadwholesite mouseenter.cms_loadwholesite');
+            if (xhr === null) {
+                $('.menu_wrap .networks-circle').html($('.networks-circle.footer_networks').html());
+                $('.menu_wrap .header_search').html($('.header .offsetMenu .header_search').html());
+
+                xhr = $.ajax(config.url, {
+                    dataType: "html",
+                    method: "get",
+                    success: function (html) {
+                        $('[data-cms-wholesite-placeholder]').replaceWith(html);
+                        
+                        app.init($menu);
+                                                
+                        for (var i in config.catalogPath) {
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .addClass("_active");
+                            $menu.find('li[data-catalog-id="' + config.catalogPath[i] + '"]')
+                                .closest('[data-tabs-content]')
+                                .trigger('open-anchor');
+                        }
+
+                        
+                        xhr = true;
+                    },
+                    error: function () {
+                        xhr = null;
+                    }
+                });
+            }
+        }
+    });
+    </script>
+
+
+<script>
+    if (window.localStorage) {
+        if (localStorage.getItem('vision-impaired'))
+            document.getElementsByTagName('html')[0].className += ' vision-impaired';
+    }
+</script>
+<script>
+    document.documentElement.style.setProperty('--scrollbar-width', '17px');
+    setTimeout(function () {
+        
+        var div = document.createElement('div');
+
+        div.style.overflowY = 'scroll';
+        div.style.width = '50px';
+        div.style.height = '50px';
+
+        
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+        var scrollWidth = Math.max(div.offsetWidth - div.clientWidth, 0.15); 
+        document.body.removeChild(div);
+        
+        document.documentElement.style.setProperty('--scrollbar-width', scrollWidth + 'px');
+    }, 0);
+</script>
+
+
+
+    
+<style>._3emE9--dark-theme .-S-tR--ff-downloader{background:rgba(30,30,30,.93);border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);color:#fff}._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn{background:#3d4b52}._3emE9--dark-theme .-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover{background:#131415}._3emE9--dark-theme .-S-tR--ff-downloader ._10vpG--footer{background:rgba(30,30,30,.93)}._2mDEx--white-theme .-S-tR--ff-downloader{background:#fff;border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);color:#314c75}._2mDEx--white-theme .-S-tR--ff-downloader ._6_Mtt--header{font-weight:700}._2mDEx--white-theme .-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice{border:0;color:rgba(0,0,0,.88)}._2mDEx--white-theme .-S-tR--ff-downloader ._10vpG--footer{background:#fff}.-S-tR--ff-downloader{display:block;overflow:hidden;position:fixed;bottom:20px;right:7.1%;width:330px;height:180px;background:rgba(30,30,30,.93);border-radius:2px;color:#fff;z-index:99999999;border:1px solid rgba(82,82,82,.54);box-shadow:0 4px 7px rgba(30,30,30,.55);transition:.5s}.-S-tR--ff-downloader._3M7UQ--minimize{height:62px}.-S-tR--ff-downloader._3M7UQ--minimize .nxuu4--file-info,.-S-tR--ff-downloader._3M7UQ--minimize ._6_Mtt--header{display:none}.-S-tR--ff-downloader ._6_Mtt--header{padding:10px;font-size:17px;font-family:sans-serif}.-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn{float:right;background:#f1ecec;height:20px;width:20px;text-align:center;padding:2px;margin-top:-10px;cursor:pointer}.-S-tR--ff-downloader ._6_Mtt--header ._2VdJW--minimize-btn:hover{background:#e2dede}.-S-tR--ff-downloader ._13XQ2--error{color:red;padding:10px;font-size:12px;line-height:19px}.-S-tR--ff-downloader ._2dFLA--container{position:relative;height:100%}.-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info{padding:6px 15px 0;font-family:sans-serif}.-S-tR--ff-downloader ._2dFLA--container .nxuu4--file-info div{margin-bottom:5px;width:100%;overflow:hidden}.-S-tR--ff-downloader ._2dFLA--container ._2bWNS--notice{margin-top:21px;font-size:11px}.-S-tR--ff-downloader ._10vpG--footer{width:100%;bottom:0;position:absolute;font-weight:700}.-S-tR--ff-downloader ._10vpG--footer ._2V73d--loader{-webkit-animation:n0BD1--rotation 3.5s linear forwards;animation:n0BD1--rotation 3.5s linear forwards;position:absolute;top:-120px;left:calc(50% - 35px);border-radius:50%;border:5px solid #fff;border-top-color:#a29bfe;height:70px;width:70px;display:flex;justify-content:center;align-items:center}.-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar{width:100%;height:18px;background:#dfe6e9;border-radius:5px}.-S-tR--ff-downloader ._10vpG--footer ._24wjw--loading-bar ._1FVu9--progress-bar{height:100%;background:#8bc34a;border-radius:5px}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status{margin-top:10px}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1XilH--state{float:left;font-size:.9em;letter-spacing:1pt;text-transform:uppercase;width:100px;height:20px;position:relative}.-S-tR--ff-downloader ._10vpG--footer ._2KztS--status ._1jiaj--percentage{float:right}</style></head>
+<body class="header-fixed">
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(5774506, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/5774506" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->   
+
+    
+    
+
+    <div class="header-print">
+        <div class="offsetMenu">
+            <div class="header-print_inner">
+                <img class="header-print_logo" alt="cbr" src="./exchage_rates_files/logo.svg">
+                <ul class="header-print_contacts">
+<li>ул. Неглинная, 12, Москва, 107016</li>
+
+<li><nobr class="phone">8 800 300-30-00</nobr></li>
+<li>www.cbr.ru</li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+    <header class="header" id="header">
+        <div class="top-line _show" data-top-line="">
+            <div class="offsetMenu">
+                <div class="col-md-23 offset-md-1">
+                    <div class="top-line_inner header_inner">
+                        <div class="row">
+                            <div class="col-xl-5 col-md-9">
+                                <div class="header_left">
+                                        <div class="header_menu" data-menu-show=""></div>
+                                    <a class="header_logo" href="https://www.cbr.ru/"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                                <div class="header_search">
+                                        <a class="header_search_btn" href="https://www.cbr.ru/currency_base/daily/#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+
+                                </div>
+                                <div class="d-none d-md-block">
+                                    <div class="header_right">
+                                        <div class="header_link"><a href="https://www.cbr.ru/reception/">Интернет-приемная</a></div>
+<div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="https://www.cbr.ru/Localization/SwitchLanguage?url=%2Fcurrency_base%2Fdaily%2F&amp;from=ru-RU&amp;to=en-GB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offsetMenu">
+            <div class="col-md-23 offset-md-1">
+                <div class="header_inner">
+                    <div class="row">
+                        <div class="col-xl-5 col-md-9">
+                            <div class="header_left">
+                                    <div class="header_menu" data-menu-show=""></div>
+                                <a class="header_logo" href="https://www.cbr.ru/"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                            <div class="header_search">
+                                    <a class="header_search_btn" href="https://www.cbr.ru/currency_base/daily/#" data-search-form-show="" title="поиск">
+        <div class="header_search_icon"></div><span class="d-none d-xl-block">Поиск по сайту</span>
+    </a>
+
+
+                            </div>
+                            <div class="d-none d-md-block">
+                                <div class="header_right">
+                                    <div class="header_link"><a href="https://www.cbr.ru/reception/">Интернет-приемная</a></div>
+<div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="https://www.cbr.ru/Localization/SwitchLanguage?url=%2Fcurrency_base%2Fdaily%2F&amp;from=ru-RU&amp;to=en-GB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form class="search-form" action="https://www.cbr.ru/search/" method="get" data-search-form="">
+    <div class="offsetMenu">
+        <div class="col-md-23 offset-md-1">
+            <div class="search-form_inner">
+                <div class="search-form_title">Что вы хотите найти?</div>
+                <div class="search-form_content">
+                    <div class="search-form_block">
+                        <div class="search-form_icon"></div>
+                        <div class="search-form_field">
+                            <input name="text" type="text" placeholder="Начните писать" data-search-form-input="">
+                        </div>
+                    </div>
+                    <div class="search-form_btn">
+                        <button class="b-btn _blue" data-search-form-btn="" disabled="">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+<div class="menu_wrap" data-menu="" data-config="{&quot;catalogPath&quot;:[22250,22249,16493],&quot;url&quot;:&quot;/Catalog/SiteMap/GetWholeSiteHtml?blockId=59191&quot;}">
+    <div class="offsetMenu">
+        <div class="header_menu _close menu_close d-none d-md-block" data-menu-close=""></div>
+        <div class="header_inner top-line_inner d-block d-md-none">
+            <div class="row">
+                <div class="col-xl-5 col-md-9">
+                    <div class="header_left">
+                        <div class="header_menu _close" data-menu-close=""></div><a class="header_logo" href="https://www.cbr.ru/"></a>
+                    </div>
+                </div>
+                <div class="col-xl-17 col-md-13 offset-md-1 header_block">
+                    <div class="header_search"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu row" data-tabs="data-tabs">
+            <div class="menu_quick col-md-7">
+                <div class="menu_quick_tabs">
+                    <a class="menu_tab _active" href="https://www.cbr.ru/currency_base/daily/#" data-tabs-tab="1">Деятельность</a>
+                    <a class="menu_tab" href="https://www.cbr.ru/currency_base/daily/#" data-tabs-tab="2">Документы и данные</a>
+                    <a class="menu_tab" href="https://www.cbr.ru/currency_base/daily/#" data-tabs-tab="3">О Банке России</a>
+                    <a class="menu_tab" href="https://www.cbr.ru/currency_base/daily/#" data-tabs-tab="4">Сервисы</a>
+                </div>
+                <div class="menu_quick_links">
+                    <div class="inner_links"><a href="https://www.cbr.ru/allcovid/" title="Новости" style="color:red">Коронавирус: поддержка экономики, бизнеса, граждан</a></div>
+<div class="phones"><a class="menu_phone_val" href="tel:+74993003000">
+<div class="plus">+</div>7 499 300-30-00</a><a class="menu_phone_val" href="tel:88003003000">8 800 300-30-00</a><a class="menu_phone_val" href="tel:300">300</a><span>Бесплатно для звонков с мобильных телефонов</span></div>
+<div class="inner_links">
+  <a href="https://www.cbr.ru/news/" title="Новости">Новости</a>
+  <a href="https://www.cbr.ru/rbr/" title="Решения Банка России">Решения Банка России</a>
+  <a href="https://www.cbr.ru/contacts/" title="Контактная информация">Контактная информация</a>
+  <a href="https://www.cbr.ru/sitemap" title="Карта сайта">Карта сайта</a>
+  <a href="https://www.cbr.ru/about/" title="О сайте">О сайте</a>
+  </div>
+<div class="networks-circle">
+  <a class="networks-circle_item _fb" href="https://www.facebook.com/cbr.ru/" title="Facebook"></a>
+  <a class="networks-circle_item _ig" href="https://www.instagram.com/cbrf_official/" title="Instagram"></a>
+  <a class="networks-circle_item _vk" href="https://vk.com/cbr_official" title="ВКонтакте"></a>
+  <a class="networks-circle_item _tw" href="https://twitter.com/bank_of_russia" title="Twitter"></a>
+  <a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia" title="Youtube"></a>
+</div>
+                </div>
+            </div>
+            <div class="d-md-none link-above">
+                <div class="header_right">
+                                        <div class="header_link"><a href="https://www.cbr.ru/reception/">Интернет-приемная</a></div>
+<div class="header_lang">
+            <div class="header_lang_item _active"><span><!--noindex-->RU<!--/noindex--></span></div>
+            <div class="header_lang_item"><a href="https://www.cbr.ru/Localization/SwitchLanguage?url=%2Fcurrency_base%2Fdaily%2F&amp;from=ru-RU&amp;to=en-GB"><!--noindex-->EN<!--/noindex--></a></div>
+</div>
+
+                                    </div>
+            </div>
+            <div class="menu_content_container col-md with-centered-loader" data-cms-wholesite-placeholder="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div id="content">
+        <div class="offsetMenu">
+            <div class="container-fluid">
+                <div class="col-md-23 offset-md-1">
+                    <div class="breadcrumbs">
+    <div class="breadcrumbs_item"><a class="breadcrumbs_home" href="https://www.cbr.ru/"></a></div>
+        <div class="breadcrumbs_item">
+            <a href="https://www.cbr.ru/hd_base/"><!--noindex-->Базы данных<!--/noindex--></a>
+        </div>
+        <div class="breadcrumbs_item">
+            <a href="https://www.cbr.ru/currency_base/"><!--noindex-->База данных по&nbsp;курсам валют<!--/noindex--></a>
+        </div>
+    </div>
+
+
+                    <!--index-->
+<h1><span class="referenceable">Официальные курсы валют на&nbsp;заданную дату, устанавливаемые ежедневно</span>
+</h1>
+                                        
+
+
+
+
+
+
+
+                                                            <style type="text/css">
+/*<![CDATA[*/
+@media print {
+  .breadcrumbs {display:none;}
+  h1 {margin-bottom:0px;} 
+  .h3 {margin-top:0px;margin-bottom:20px;}
+  .page-info {margin-top:0px;margin-bottom:0px;border-top:none;padding-top:0px;}
+  .block-part {margin-bottom:0px;}
+  .table-wrapper {margin-bottom:0px;}
+  table.data td, table.data th {padding:4px;}
+}
+/*]]*/
+</style>
+
+
+<script type="text/javascript">
+<!--
+    var UniDbQuery_Data = {"CurrentDT":[{"DT":"2020-11-21T00:00:00","MaxDate":"2020-11-21T00:00:00","MinDate":"1992-07-01T00:00:00"}]};
+// -->
+</script>
+
+        <!--noindex-->
+<div class="block-part">
+<form action="https://www.cbr.ru/currency_base/daily/" data-auto-submit="true" method="get"><input id="UniDbQuery_Posted" name="UniDbQuery.Posted" type="hidden" value="True">        <div class="block-part vertical" id="UniDbQuery_form">
+
+
+
+
+    <div class="filters_wrapper">
+        <div class="filters">
+
+
+
+    <div class="filter">
+            <div class="datepicker-filter" data-datepicker-filter="" data-min-date="01.07.1992" data-max-date="21.11.2020" data-default-value="21.11.2020">
+        <input class="datepicker-filter_input" type="hidden" name="UniDbQuery.To" value="21.11.2020">
+        <button class="datepicker-filter_button" type="button">21.11.2020</button>
+        <div class="datepicker-filter_modal">
+            <div class="datepicker-filter_head">
+                <div class="datepicker-filter_close"></div>
+            </div>
+            <div class="datepicker-filter_body">
+                <div class="datepicker-filter_datepicker datepicker-custom hasDatepicker" id="dp1605950796631"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="&lt;Пред"><span class="ui-icon ui-icon-circle-triangle-w">&lt;Пред</span></a><a class="ui-datepicker-next ui-corner-all ui-state-disabled" title="След&gt;"><span class="ui-icon ui-icon-circle-triangle-e">След&gt;</span></a><div class="ui-datepicker-title"><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"><option value="0">Январь</option><option value="1">Февраль</option><option value="2">Март</option><option value="3">Апрель</option><option value="4">Май</option><option value="5">Июнь</option><option value="6">Июль</option><option value="7">Август</option><option value="8">Сентябрь</option><option value="9">Октябрь</option><option value="10" selected="selected">Ноябрь</option></select><select class="ui-datepicker-year" data-handler="selectYear" data-event="change"><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020" selected="selected">2020</option></select></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="понедельник">Пн</span></th><th scope="col"><span title="вторник">Вт</span></th><th scope="col"><span title="среда">Ср</span></th><th scope="col"><span title="четверг">Чт</span></th><th scope="col"><span title="пятница">Пт</span></th><th scope="col" class="ui-datepicker-week-end"><span title="суббота">Сб</span></th><th scope="col" class="ui-datepicker-week-end"><span title="воскресенье">Вс</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">1</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">7</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">8</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">14</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">15</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default" href="https://www.cbr.ru/currency_base/daily/#">20</a></td><td class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="10" data-year="2020"><a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="https://www.cbr.ru/currency_base/daily/#">21</a></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">23</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">24</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">26</span></td><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">27</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">28</span></td><td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">29</span></td></tr><tr><td class=" ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">30</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+        </div>
+</form></div>        <!--/noindex-->
+<h2 class="h3">	  
+		  Центральный банк Российской Федерации установил с 
+		  21.11.2020
+		  следующие курсы иностранных валют к рублю Российской Федерации без обязательств Банка России покупать или продавать указанные валюты по данному курсу	  
+		</h2>
+<div class="table-wrapper">
+  <div class="table">
+    <table class="data">
+      <tbody>
+        <tr>
+          <th>Цифр. код</th>
+          <th>Букв. код</th>
+          <th>Единиц</th>
+          <th>Валюта</th>
+          <th>Курс</th>
+        </tr>
+        <tr>
+          <td class="">036</td>
+          <td class="">AUD</td>
+          <td class="">1</td>
+          <td class="">Австралийский доллар</td>
+          <td class="">55,4127</td>
+        </tr>
+        <tr>
+          <td>944</td>
+          <td>AZN</td>
+          <td>1</td>
+          <td>Азербайджанский манат</td>
+          <td>44,7393</td>
+        </tr>
+        <tr>
+          <td>051</td>
+          <td>AMD</td>
+          <td>100</td>
+          <td>Армянских драмов</td>
+          <td>15,2558</td>
+        </tr>
+        <tr>
+          <td>933</td>
+          <td>BYN</td>
+          <td>1</td>
+          <td>Белорусский рубль</td>
+          <td>29,7619</td>
+        </tr>
+        <tr>
+          <td>975</td>
+          <td>BGN</td>
+          <td>1</td>
+          <td>Болгарский лев</td>
+          <td>46,1322</td>
+        </tr>
+        <tr>
+          <td class="">986</td>
+          <td class="">BRL</td>
+          <td class="">1</td>
+          <td class="">Бразильский реал</td>
+          <td class="">14,3265</td>
+        </tr>
+        <tr>
+          <td class="">348</td>
+          <td class="">HUF</td>
+          <td class="">100</td>
+          <td class="">Венгерских форинтов</td>
+          <td class="">25,1026</td>
+        </tr>
+        <tr>
+          <td class="">410</td>
+          <td class="">KRW</td>
+          <td class="">1000</td>
+          <td class="">Вон Республики Корея</td>
+          <td class="">68,0690</td>
+        </tr>
+        <tr>
+          <td class="">344</td>
+          <td class="">HKD</td>
+          <td class="">10</td>
+          <td class="">Гонконгских долларов</td>
+          <td class="">98,0446</td>
+        </tr>
+        <tr>
+          <td class="">208</td>
+          <td class="">DKK</td>
+          <td class="">1</td>
+          <td class="">Датская крона</td>
+          <td class="">12,1094</td>
+        </tr>
+        <tr>
+          <td class="">840</td>
+          <td class="">USD</td>
+          <td class="">1</td>
+          <td class="">Доллар США</td>
+          <td class="">76,0120</td>
+        </tr>
+        <tr>
+          <td class="">978</td>
+          <td class="">EUR</td>
+          <td class="">1</td>
+          <td class="">Евро</td>
+          <td class="">90,2643</td>
+        </tr>
+        <tr>
+          <td class="">356</td>
+          <td class="">INR</td>
+          <td class="">10</td>
+          <td class="">Индийских рупий</td>
+          <td class="">10,2573</td>
+        </tr>
+        <tr>
+          <td class="">398</td>
+          <td class="">KZT</td>
+          <td class="">100</td>
+          <td class="">Казахстанских тенге</td>
+          <td class="">17,7499</td>
+        </tr>
+        <tr>
+          <td>124</td>
+          <td>CAD</td>
+          <td>1</td>
+          <td>Канадский доллар</td>
+          <td>58,2021</td>
+        </tr>
+        <tr>
+          <td class="">417</td>
+          <td class="">KGS</td>
+          <td class="">100</td>
+          <td class="">Киргизских сомов</td>
+          <td class="">89,6271</td>
+        </tr>
+        <tr>
+          <td>156</td>
+          <td>CNY</td>
+          <td>1</td>
+          <td>Китайский юань</td>
+          <td>11,5660</td>
+        </tr>
+        <tr>
+          <td>498</td>
+          <td>MDL</td>
+          <td>10</td>
+          <td>Молдавских леев</td>
+          <td>44,2187</td>
+        </tr>
+        <tr>
+          <td class="">934</td>
+          <td class="">TMT</td>
+          <td class="">1</td>
+          <td class="">Новый туркменский манат</td>
+          <td class="">21,7488</td>
+        </tr>
+        <tr>
+          <td class="">578</td>
+          <td class="">NOK</td>
+          <td class="">10</td>
+          <td class="">Норвежских крон</td>
+          <td class="">84,4437</td>
+        </tr>
+        <tr>
+          <td class="">985</td>
+          <td class="">PLN</td>
+          <td class="">1</td>
+          <td class="">Польский злотый</td>
+          <td class="">20,1913</td>
+        </tr>
+        <tr>
+          <td class="">946</td>
+          <td class="">RON</td>
+          <td class="">1</td>
+          <td class="">Румынский лей</td>
+          <td class="">18,5142</td>
+        </tr>
+        <tr>
+          <td class="">960</td>
+          <td class="">XDR</td>
+          <td class="">1</td>
+          <td class="">СДР (специальные права заимствования)</td>
+          <td class="">108,1871</td>
+        </tr>
+        <tr>
+          <td class="">702</td>
+          <td class="">SGD</td>
+          <td class="">1</td>
+          <td class="">Сингапурский доллар</td>
+          <td class="">56,5692</td>
+        </tr>
+        <tr>
+          <td class="">972</td>
+          <td class="">TJS</td>
+          <td class="">10</td>
+          <td class="">Таджикских сомони</td>
+          <td class="">67,1040</td>
+        </tr>
+        <tr>
+          <td class="">949</td>
+          <td class="">TRY</td>
+          <td class="">1</td>
+          <td class="">Турецкая лира</td>
+          <td class="">10,0149</td>
+        </tr>
+        <tr>
+          <td class="">860</td>
+          <td class="">UZS</td>
+          <td class="">10000</td>
+          <td class="">Узбекских сумов</td>
+          <td class="">73,1523</td>
+        </tr>
+        <tr>
+          <td class="">980</td>
+          <td class="">UAH</td>
+          <td class="">10</td>
+          <td class="">Украинских гривен</td>
+          <td class="">26,8198</td>
+        </tr>
+        <tr>
+          <td>826</td>
+          <td>GBP</td>
+          <td>1</td>
+          <td>Фунт стерлингов Соединенного королевства</td>
+          <td>100,8071</td>
+        </tr>
+        <tr>
+          <td class="">203</td>
+          <td class="">CZK</td>
+          <td class="">10</td>
+          <td class="">Чешских крон</td>
+          <td class="">34,2636</td>
+        </tr>
+        <tr>
+          <td>752</td>
+          <td>SEK</td>
+          <td>10</td>
+          <td>Шведских крон</td>
+          <td>88,3809</td>
+        </tr>
+        <tr>
+          <td class="">756</td>
+          <td class="">CHF</td>
+          <td class="">1</td>
+          <td class="">Швейцарский франк</td>
+          <td class="">83,5756</td>
+        </tr>
+        <tr>
+          <td class="">710</td>
+          <td class="">ZAR</td>
+          <td class="">10</td>
+          <td class="">Южноафриканских рэндов</td>
+          <td class="">49,2816</td>
+        </tr>
+        <tr>
+          <td>392</td>
+          <td>JPY</td>
+          <td>100</td>
+          <td>Японских иен</td>
+          <td>73,2011</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<form action="https://www.cbr.ru/Content/SaveToPdf/Page" class="print-button-wrap" method="get">    <input type="hidden" name="url" value="/currency_base/daily/">
+    <input class="btn _medium _outline" type="submit" value="Сохранить в PDF">
+</form>
+
+                    
+                    <!--/index-->
+                    
+    <div class="page-info">
+        <!--noindex-->
+        
+
+
+<div class="page-info_helpful" data-page-feedback="" data-feedback-url="/Content/PageInfo/RegisterFeedback">
+    <!--noindex-->
+    <div class="helpful" data-helpful="">
+        Страница была полезной?
+        <div class="helpful_btns">
+            <button class="helpful_btn _yes" data-helpful-btn="yes"><i class="helpful_icon"></i><span>Да</span></button>
+            <button class="helpful_btn _no" data-helpful-btn="no"><i class="helpful_icon"></i><span>Нет</span></button>
+        </div>
+    </div>
+    <!--/noindex-->
+</div>
+
+            <div class="page-info_last-update">Последнее обновление страницы: 20.11.2020</div>
+        <!--/noindex-->
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="offsetMenu">
+            <div class="footer_main">
+                <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2">
+                    <div class="footer_top">
+                        <a class="footer_logo" href="https://www.cbr.ru/"></a>
+                        <div class="footer_up gotoUp">
+                            <div class="footer_up_title">Наверх</div>
+                            <div class="footer_up_icon"></div>
+                        </div>
+                    </div>
+                    
+<div class="footer_contacts">
+<div class="footer_address">ул. Неглинная, 12, Москва, 107016</div>
+<div class="footer_phones">
+<div class="footer_phone"><a class="footer_phone_val" href="tel:88003003000">8&nbsp;800 300-30-00</a><span>(круглосуточно, бесплатно для&nbsp;звонков из&nbsp;регионов России)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:+74993003000">+7&nbsp;499 300-30-00</a><span>(круглосуточно, в&nbsp;соответствии с&nbsp;тарифами вашего оператора)</span></div>
+<div class="footer_phone"><a class="footer_phone_val" href="tel:300">300</a><span>(круглосуточно, бесплатно для&nbsp;звонков с&nbsp;мобильных телефонов)</span></div>
+</div>
+</div>
+<div class="footer_main_block">
+<div class="footer_left-menu">
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/lk_uio/">Личный кабинет участников рынка</a></div>
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/about_br/irp/">Отношения с&nbsp;инвесторами</a></div>
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/rbr/list_inside/">Перечень инсайдерской информации Банка России</a></div>
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/analytics/na_vr/">Официальное опубликование нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/project_na/">Проекты нормативных актов Банка России</a></div>
+<div class="footer_left-menu_item"><a href="https://www.cbr.ru/other/holidays/">Перечень нерабочих праздничных дней и&nbsp;перенесенных выходных дней</a></div>
+</div>
+<div class="networks-circle footer_networks">
+<a class="networks-circle_item _fb" href="https://www.facebook.com/cbr.ru/"></a>
+<a class="networks-circle_item _ig" href="https://www.instagram.com/cbrf_official/" title="Instagram"></a>
+<a class="networks-circle_item _vk" href="https://vk.com/cbr_official"></a>
+<a class="networks-circle_item _tw" href="https://twitter.com/bank_of_russia"></a>
+<a class="networks-circle_item _yt" href="https://www.youtube.com/user/BankofRussia"></a>
+</div>
+</div>
+<div class="footer_menu">
+<div class="footer_menu_items">
+<div class="footer_menu_item"><a href="https://www.cbr.ru/about/">О&nbsp;сайте</a></div>
+<div class="footer_menu_item"><a href="https://www.cbr.ru/contacts/">Контакты</a></div>
+<div class="footer_menu_item"><a href="https://www.cbr.ru/about_br/anticor/">Противодействие коррупции</a></div>
+<div class="footer_menu_item"><a href="https://www.cbr.ru/development/">Технические ресурсы</a></div>
+</div>
+			 <div class="footer_menu_item _visually-impaired"><a href="https://www.cbr.ru/currency_base/daily/#" title="Версия для слабовидящих"><span class="visually-impaired-on">Версия для&nbsp;слабовидящих</span><span class="visually-impaired-off">Обычная версия</span></a></div>
+</div>
+
+
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="col-md-23 col-xl-22 offset-md-1 offset-xl-2 row">
+                    <div class="footer_bottom_text col-md-12 col-xl-11">© Банк России, 2000–2020.</div>
+<div class="footer_bottom_aic col-md-11">Дизайн сайта — <a href="https://aic.ru/" target="_blank"><img src="./exchage_rates_files/aic-logo.svg"></a></div>
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+        <div class="popup-cookies" data-popup-cookies="">
+        <div class="popup-cookies_title">
+            На сайте Банка России используются файлы cookie
+        </div>
+        <div class="popup-cookies_subtitle">
+            Оставаясь на <a href="https://www.cbr.ru/">www.cbr.ru</a>, вы принимаете
+            <a href="https://www.cbr.ru/user_agreement/">пользовательское соглашение</a>
+        </div>
+        <button class="btn _medium _blue " data-popup-cookies-btn="">
+            Подтвердить
+        </button>
+    </div>
+
+
+    
+<!--[if IE 9]><script>$('body').addClass('ie9')</script><![endif]-->
+<script src="./exchage_rates_files/PageInfo.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            Content_PageInfo.init($('[data-page-feedback]'));
+        });
+    </script>
+
+
+
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="mobile-tooltip" style="display: none;"><div></div><div class="mobile-tooltip_close"></div></div><iframe name="ym-native-frame" title="ym-native-frame" frameborder="0" aria-hidden="true" style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" src="./exchage_rates_files/saved_resource.html"></iframe><ym-measure class="ym-viewport" style="display: block; top: 0px; right: 0px; bottom: 0px; left: 0px; height: 100vh; width: 100vw; position: fixed; transform: translate(0px, -100%); transform-origin: 0px 0px;"></ym-measure><ym-measure class="ym-zoom" style="bottom: 100%; position: fixed; width: 100vw;"></ym-measure></body></html>

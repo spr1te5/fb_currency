@@ -1,0 +1,9 @@
+#rate-wrapper
+  %p
+    Here's the latest RUR/USD exchange rate : 
+    %span.value
+
+:javascript
+  $(function() {
+    new DisplayVM(#{@value}, $('#rate-wrapper .value').eq(0));
+  })
