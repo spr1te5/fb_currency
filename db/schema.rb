@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_22_112043) do
+ActiveRecord::Schema.define(version: 2020_11_23_063152) do
 
   create_table "currency_exchange_rates", force: :cascade do |t|
     t.integer "from_code"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_11_22_112043) do
     t.integer "source_rate", limit: 8
     t.integer "forced_rate_degree", limit: 1
     t.integer "source_rate_degree", limit: 1
+    t.boolean "updated"
   end
 
 end

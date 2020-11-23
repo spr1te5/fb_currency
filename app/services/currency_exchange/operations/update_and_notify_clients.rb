@@ -6,8 +6,10 @@ module CurrencyExchange
         case rate[:status]
         when :success
            exch = rate[:rate]
-           if exch.chanded_for_notification?
+           puts ">>>>> UPDATED: #{exch.updated_for_notifications?}"
+           if exch.updated_for_notifications?
              notify_clients(exch)
+             exch.not_updated_for_notifications!(true)
              {status: :updated}
            else
              {status: :skipped}

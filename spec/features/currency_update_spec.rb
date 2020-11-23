@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-feature 'RUR/USD exchange rate management GUI', type: :feature do
+feature 'RUR/USD exchange rate GUI', type: :feature do
 	context 'default value' do
     it 'is set' do
       old_rate = 33
       today = Time.now.to_date
 
       month_selector = ->(day) {
-        # all(:css, "#currency_exchange_rate_valid_until_2i option[value='#{day.month}']").select_option
         find('#currency_exchange_rate_valid_until_2i').all(:css, 'option')[day.month-1].text
       }
 
@@ -23,7 +22,7 @@ feature 'RUR/USD exchange rate management GUI', type: :feature do
       wait_for_ajax
       
       visit root_path
-      expect(find(:css, '#rate-wrapper .value').text).to eq '33'
+      expect(find(:css, '#rate-wrapper .value').text).to eq old_rate.to_s
 
       yesterday = today - 1.day
       visit admin_path

@@ -33,8 +33,8 @@ class DashboardController < ApplicationController
   end
 
   def broadcast_currency_update
-    CurrencyExchange::Operations::UpdateAndNotifyClients.perform(from: CurrencyExchange::Codes::RUR, 
-                                                                 to: CurrencyExchange::Codes::USD)
-    head :ok
+    result = CurrencyExchange::Operations::UpdateAndNotifyClients.perform(from: CurrencyExchange::Codes::RUR, 
+                                                                          to: CurrencyExchange::Codes::USD)
+    render json: result
   end
 end

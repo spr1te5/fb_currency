@@ -10,6 +10,10 @@ class CurrencyExchangeRate < ApplicationRecord
   default_value_for :source_rate_degree, allows_nil: false, value: 0
   default_value_for :forced_rate_degree, allows_nil: false, value: 0
 
+  default_value_for :updated, false
+
+  before_save :set_updated
+
   def rate
     if valid_until
       Time.now.to_date <= valid_until ? forced_value : source_value
@@ -34,13 +38,26 @@ class CurrencyExchangeRate < ApplicationRecord
     set_value :source_rate, new_value
   end
 
+  def updated_for_notifications?
+    updated
+  end
+
+  def not_updated_for_notifications!(persist)
+    self.updated = false
+    save! if persist
+  end
+
+  private
+
+  def set_updated
+    self.updated ||= chanded_for_notification?
+  end
+
   def chanded_for_notification?
     source_rate_changed? ||
     forced_rate_changed? ||
     valid_until_changed?
   end
-
-  private
 
   def set_value(name, new_value)
     string_value = new_value.to_s
