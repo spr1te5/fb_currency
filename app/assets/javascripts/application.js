@@ -13,10 +13,11 @@
 
 //= require jquery
 //= require rails-ujs
-//= require twitter/bootstrap
+////= require twitter/bootstrap
 //= require activestorage
 //= require turbolinks
-//= require ./bootstrap
-//= require ./cable
 
+//= require bootstrap
+
+//= require ./cable
 //= require ./pages

@@ -1,9 +1,14 @@
-= simple_form_for @rate, url: admin_update_rate_path, html: {id: 'rate-wrapper'}, data:{remote: true} do |f|
-  %span
-    Here's the latest manually set RUR/USD exchange rate: 
-  = f.input :forced_value, as: :float, input_html: {step: '0.01'}
-  = f.input :valid_until, as: :date, order: [:day, :month, :year]
-  = f.submit 'Set exchange rate!'
+%nav.navbar.navbar-inverse
+
+.container-fluid
+  .row
+    .col-sm-offset-5.col-sm-2
+      = simple_form_for @rate, url: admin_update_rate_path, html: {id: 'rate-wrapper'}, data:{remote: true} do |f|
+        %span
+          Here's the latest manually set RUR/USD exchange rate: 
+        = f.input :forced_value, as: :float, input_html: {step: '0.01'}
+        = f.input :valid_until, as: :date, order: [:day, :month, :year]
+        = f.submit 'Set exchange rate!'
 
 :javascript
   $(function() {

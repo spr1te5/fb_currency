@@ -1,7 +1,12 @@
-#rate-wrapper
-  %p
-    Here's the latest RUR/USD exchange rate : 
-    %span.value
+%nav.navbar.navbar-inverse
+
+.container-fluid
+  .row
+    .col-sm-offset-3.col-sm-6
+      #rate-wrapper
+        %p.rate-info
+          Here's the latest RUR/USD exchange rate : 
+          %span.value
 
 :javascript
   $(function() {
