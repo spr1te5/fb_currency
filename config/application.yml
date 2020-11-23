@@ -1,0 +1,2 @@
+development:
+  exchange_rate_notification_url: 'http://localhost:3000/broadcast_currency_update'
