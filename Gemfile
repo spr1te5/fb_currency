@@ -75,4 +75,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'foreman'
 gem 'default_value_for'
 
-gem 'redis', '~> 4.0'
+gem 'whenever', require: false 
+gem 'figaro'
