@@ -6,7 +6,6 @@ module CurrencyExchange
         case rate[:status]
         when :success
            exch = rate[:rate]
-           puts ">>>>> UPDATED: #{exch.updated_for_notifications?}"
            if exch.updated_for_notifications?
              notify_clients(exch)
              exch.not_updated_for_notifications!(true)
@@ -20,7 +19,6 @@ module CurrencyExchange
       end
 
       def self.notify_clients(exch)
-        #TODO: schedule bg/job
         ActionCable.server.broadcast 'currency_exchange_channel', rate: exch.rate
       end
     end
