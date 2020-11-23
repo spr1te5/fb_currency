@@ -36,7 +36,8 @@ feature 'RUR/USD exchange rate GUI', type: :feature do
       new_rate = 80
       allow(CurrencyExchange::Sources::CbrRu).to receive(:retrieve).and_return({status: :success, rate: new_rate})
 
-      visit broadcast_currency_update_path
+      CurrencyExchange::Operations::UpdateLatestFromSource.perform(from: CurrencyExchange::Codes::RUR,
+                                                                   to: CurrencyExchange::Codes::USD)
       visit root_path
       expect(find(:css, '#rate-wrapper .value').text).to eq new_rate.to_s
     end

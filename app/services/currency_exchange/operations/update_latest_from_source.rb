@@ -13,7 +13,7 @@ module CurrencyExchange
         case source_rate[:status]
         when :success
           latest = RetrieveLatest.perform(from: from, to: to)
-          latest.source_rate = source_rate[:rate]
+          latest.update!(source_rate: source_rate[:rate])
           {status: :success, rate: latest}
         when :error
           {status: :error}
