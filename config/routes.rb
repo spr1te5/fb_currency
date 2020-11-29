@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get '/admin', to: 'dashboard#admin'
   patch '/admin/update_rate', to: 'dashboard#update_rate'
-  get '/broadcast_currency_update', to: 'dashboard#broadcast_currency_update'
 
   mount ActionCable.server => '/cable'
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end

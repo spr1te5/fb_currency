@@ -1,10 +1,19 @@
-development:
-  adapter: async
+# development:
+#   adapter: async
 
-test:
-  adapter: async
+# test:
+#   adapter: async
 
-production:
+# production:
+#   adapter: redis
+#   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+#   channel_prefix: currency_exchage_production
+
+redis: &redis
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  url: <%= Figaro.env.sidekiq_redis_url %>
   channel_prefix: currency_exchage_production
+
+production: *redis
+development: *redis
+test: *redis

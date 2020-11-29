@@ -2,12 +2,13 @@ class DashboardController < ApplicationController
   def display
     @rate = CurrencyExchange::Operations::RetrieveLatest.perform(from: CurrencyExchange::Codes::RUR, 
                                                                  to: CurrencyExchange::Codes::USD)
-    @value = @rate.rate
+    @value = @rate.fetch(:rate).rate
   end
 
   def admin
-    @rate = CurrencyExchange::Operations::RetrieveLatest.perform(from: CurrencyExchange::Codes::RUR, 
+    result = CurrencyExchange::Operations::RetrieveLatest.perform(from: CurrencyExchange::Codes::RUR, 
                                                                  to: CurrencyExchange::Codes::USD)
+    @rate = result.fetch(:rate)
     @value = @rate.rate
   end
 
@@ -30,11 +31,5 @@ class DashboardController < ApplicationController
         render json: update_result, status: @response_status
       end
     end
-  end
-
-  def broadcast_currency_update
-    result = CurrencyExchange::Operations::BroadcastRateChanges.perform(from: CurrencyExchange::Codes::RUR, 
-                                                                        to: CurrencyExchange::Codes::USD)
-    render json: result
   end
 end

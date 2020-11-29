@@ -10,14 +10,14 @@ module CurrencyExchange
       def self.perform(from:, to:)
         source = sources.fetch("#{from}_#{to}")
         source_rate = source.retrieve
-        case source_rate[:status]
-        when :success
-          latest = RetrieveLatest.perform(from: from, to: to)
-          latest.update!(source_rate: source_rate[:rate])
-          {status: :success, rate: latest}
-        when :error
-          {status: :error}
-        end
+        return source_rate unless source_rate.fetch(:status) == :success
+
+        latest = RetrieveLatest.perform(from: from, to: to)
+        return latest unless latest.fetch(:status) == :success
+
+        rate = latest.fetch(:rate)
+        rate.update!(source_rate: source_rate[:rate])
+        {status: :success, rate: rate}
       end
     end
   end

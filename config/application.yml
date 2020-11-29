@@ -1,2 +1,5 @@
 development:
   exchange_rate_notification_url: 'http://localhost:3000/broadcast_currency_update'
+  sidekiq_redis_url: redis://localhost:6379/0
+  app_namespace: 'fb_currency_development'
+  sidekiq_pool_size: 12

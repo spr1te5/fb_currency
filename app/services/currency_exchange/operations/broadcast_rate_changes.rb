@@ -1,11 +1,19 @@
 module CurrencyExchange
   module Operations
     class BroadcastRateChanges
-      def self.perform(from:, to:)
-        exch = RetrieveLatest.perform(from: from, to: to)
+      CHANNEL_NAME = 'currency_exchange_channel'
+
+      def self.perform(from: nil, to: nil, rate: nil)
+        exch = rate
+        unless exch
+          latest = RetrieveLatest.perform(from: from, to: to) 
+          return latest if latest.fetch(:status) != :success
+          exch = latest.fetch(:rate)
+        end
+
         if exch.updated_for_notifications?
           exch.not_updated_for_notifications!(true)
-          ActionCable.server.broadcast 'currency_exchange_channel', rate: exch.rate
+          ActionCable.server.broadcast CHANNEL_NAME, rate: exch.rate
           {status: :updated}
         else
           {status: :skipped}

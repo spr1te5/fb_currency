@@ -13,8 +13,8 @@ module CurrencyExchange
          http.use_ssl = true if uri.scheme == 'https'
          html = http.request(Net::HTTP::Get.new(uri.request_uri)).body
          {status: :success, rate: extract_rate_from_string(html)}
-      rescue
-         {status: :error}
+      rescue => e
+         {status: :error, errors: [e.message]}
       end
 
       # :nodoc:

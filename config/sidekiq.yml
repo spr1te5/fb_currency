@@ -1,0 +1,4 @@
+:schedule:
+  currency_exchange_rate_updater:
+    cron: '0 * * * * *'   # Runs once per minute
+    class: CurrencyExchange::Jobs::UpdateRatesAndNotifyClients
