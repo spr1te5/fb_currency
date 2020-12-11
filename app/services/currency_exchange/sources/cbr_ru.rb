@@ -6,7 +6,7 @@ module CurrencyExchange
       VALUE_MASK = /<td[^>]*>840<\/td>\s*<td[^>]*>[^<]*<\/td>\s*<td[^>]*>[^<]*<\/td>\s*<td[^>]*>[^<]*<\/td>\s*<td[^>]*>([0-9\.\,]*)<\/td>/im
 	    REQUEST_URI = 'https://www.cbr.ru/currency_base/daily/'
 
-	   # :nodoc:
+	    # :nodoc:
 	    def self.retrieve
        	 uri = URI.parse(REQUEST_URI)
          http = Net::HTTP.new(uri.host, uri.port)

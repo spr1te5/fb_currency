@@ -3,10 +3,10 @@ module CurrencyExchange
     class BroadcastRateChanges
       CHANNEL_NAME = 'currency_exchange_channel'
 
-      def self.perform(from: nil, to: nil, rate: nil)
+      def perform(from: nil, to: nil, rate: nil)
         exch = rate
         unless exch
-          latest = RetrieveLatest.perform(from: from, to: to) 
+          latest = RetrieveLatest.new.perform(from: from, to: to) 
           return latest if latest.fetch(:status) != :success
           exch = latest.fetch(:rate)
         end

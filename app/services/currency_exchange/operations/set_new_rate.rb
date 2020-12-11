@@ -1,8 +1,8 @@
 module CurrencyExchange
   module Operations
     class SetNewRate
-      def self.perform(from:, to:, rate:)
-        latest_rate = RetrieveLatest.perform(from: from, to: to)
+      def perform(from:, to:, rate:)
+        latest_rate = RetrieveLatest.new.perform(from: from, to: to)
         return latest_rate unless latest_rate.fetch(:status) == :success
 
         current_rate = latest_rate.fetch(:rate)

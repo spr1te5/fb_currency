@@ -7,12 +7,12 @@ module CurrencyExchange
         "#{Codes::RUR}_#{Codes::USD}" => Sources::CbrRu
       }
 
-      def self.perform(from:, to:)
-        source = sources.fetch("#{from}_#{to}")
+      def perform(from:, to:)
+        source = self.class.sources.fetch("#{from}_#{to}")
         source_rate = source.retrieve
         return source_rate unless source_rate.fetch(:status) == :success
 
-        latest = RetrieveLatest.perform(from: from, to: to)
+        latest = RetrieveLatest.new.perform(from: from, to: to)
         return latest unless latest.fetch(:status) == :success
 
         rate = latest.fetch(:rate)
